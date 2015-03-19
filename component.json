@@ -1,0 +1,21 @@
+{
+  "name": "dialog",
+  "version": "1.0.0",
+  "description": "提供简易版wap对话框。",
+  "keywords": [
+    "ui",
+    "dialog"
+  ],
+  "main": "dialog.js",
+  "scripts:": [
+    "dialog.js"
+  ],
+  "styles:": [
+    "dialog.css"
+  ],
+  "images": [
+    "close.png",
+    "loading.gif",
+    "tips.png"
+  ]
+}
