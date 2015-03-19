@@ -93,7 +93,7 @@
     right:10px;
     width:14px;
     height:14px;
-    background:url(ui-dialog-close.png) -36px 0 no-repeat;
+    background:url(close.png) -36px 0 no-repeat;
     cursor:pointer;
 }
 .ui-dialog-close:hover {
