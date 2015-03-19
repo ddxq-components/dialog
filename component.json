@@ -7,10 +7,10 @@
     "dialog"
   ],
   "main": "dialog.js",
-  "scripts:": [
+  "scripts": [
     "dialog.js"
   ],
-  "styles:": [
+  "styles": [
     "dialog.css"
   ],
   "images": [
