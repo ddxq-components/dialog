@@ -1,19 +1,23 @@
 m-dialog
 ==========
 简易版wap对话框
+此库依赖全局变量$, 需要jQuery或Zepto将提前$注入到全局变量中。
 ----------
 
 ## 使用说明
 
 ```
-$.mDialog.lock(opt)
-$.mDialog.unLock()
-$.mDialog.getDialog(dialogId)
-$.mDialog.closeDialog(dialogId) 
-$.mDialog.dialog(opt) 
-$.mDialog.alert(msg, fn, title)
-$.mDialog.confirm(msg, ok, cancel, title)
-$.mDialog.prompt(title, defaultVal, fn)
-$.mDialog.tips(msg, type, time) 
-$.mDialog.closeTips()
+var $ = require('zepto');
+var dialog = require('dialog');
+
+dialog.lock(opt)
+dialog.unLock()
+dialog.getDialog(dialogId)
+dialog.closeDialog(dialogId)
+dialog.dialog(opt)
+dialog.alert(msg, fn, title)
+dialog.confirm(msg, ok, cancel, title)
+dialog.prompt(title, defaultVal, fn)
+dialog.tips(msg, type, time)
+dialog.closeTips()
 ```
