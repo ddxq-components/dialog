@@ -226,7 +226,8 @@ var dialog = {
         $(".ui-tips-text", $uiTips).html(msg);
         $uiTips.show();
         clearTimeout(_uiTipsTimer);
-        if (!isNaN(time)) {
+        time = isNaN(time) ? 2 : time;
+        if (time > 0) {
             _uiTipsTimer = setTimeout(function () {
                 that.closeTips();
             }, time * 1000);
