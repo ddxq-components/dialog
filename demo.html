@@ -9,8 +9,15 @@
     <meta name="format-detection" content="telephone=no"/>
     <link rel="stylesheet" href="dialog.css"/>
     <script type="text/javascript" src="http://lib.ttdtweb.com/base/scripts/zepto/all.js"></script>
-    <script type="text/javascript" src="dialog.js"></script>
+    <script src="require1k.js"></script>
     <script>
+        R("./dialog", function (err, dialog) {
+            if (err) {
+                console.log(err.statusText)
+                return
+            }
+            $.mDialog = dialog;
+        });
         function demoTip(i) {
             var tip = "",
                     type = "";

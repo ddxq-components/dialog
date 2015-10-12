@@ -1,3 +1,29 @@
+
+@font-face {font-family: "iconfont";
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-close-fill:before { content: "\e634"; }
+.icon-alert-fill:before { content: "\e635"; }
+.icon-cross-fill:before { content: "\e632"; }
+.icon-tick-fill:before { content: "\e633"; }
+
+i.iconfont {
+    display: inline-block;
+}
+
 /* mask */
  .ui-mask {
     position:fixed;
@@ -20,47 +46,41 @@
 .ui-tips-i {
     position: relative;
     display: inline-block;
-    min-height: 48px;
     line-height: 18px;
     font-weight: bold;
     font-size: 14px;
-    color: #606060;
-    border:1px solid #ccc;
-    padding:0 10px 0 48px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 6px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 6px;
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FAFAFA), to(#E4E4E4));
-    border: 1px solid #fff;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
+    color: #fff;
+    background-color: rgba(0,0,0,.6);
+    padding:20px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
 }
 .ui-tips-text {
-    padding: 15px 0;
+    font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文黑体", STHeiti, sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
     display: inline-block;
 }
 .ui-tips-icon {
-    position: absolute;
-    left:0;
-    top:50%;
-    width: 48px;
-    height:48px;
-    margin-top: -24px;
-    background: url(tips.png) no-repeat;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto;
+}
+.ui-tips-icon .iconfont {
+    font-size: 3rem;
+    line-height: 3rem;
 }
 .ui-tips-succeed .ui-tips-icon {
-    background-position: 0 0;
 }
 .ui-tips-error .ui-tips-icon {
-    background-position: 0 -48px;
 }
 .ui-tips-info .ui-tips-icon {
-    background-position: 0 -96px;
 }
 .ui-tips-loading .ui-tips-i {
-    padding-left:32px;
 }
 .ui-tips-loading .ui-tips-icon {
-    width: 36px;
+    width: 3rem;
     background: url(loading.gif) no-repeat center;
 }
 /* dialog */
@@ -68,48 +88,65 @@
     outline: none;
 }
 .ui-dialog {
-    font: 14px/1.2em'Microsoft YaHei';
     color: #888;
+    font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文黑体", STHeiti, sans-serif;
     display:block;
     position:fixed;
     top:50%;
     left:50%;
-    background-color:#fff;
+    padding-top: 2rem;
+    background-color:#f8f8f8;
     z-index:10000;
     border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);    
     z-index: 10000;
 }
-.ui-dialog-header{
-    padding:0 10px;
+.ui-dialog-header {
+    padding: 0 20px 1.5rem;
 }
 .ui-dialog-title {
-    line-height:32px;
-    border-bottom:1px solid #ddd;
+    text-align: center;
+    font-size: 1.6rem;
+    height: 3rem;
+    line-height: 3rem;
+    color: #333;
+}
+.ui-dialog-title .iconfont {
+    font-size: 3rem;
+    line-height: 3rem;
+    color: #ffb53a;
 }
 .ui-dialog-close {
     position:absolute;
+    display: block;
     top:10px;
     right:10px;
-    width:14px;
-    height:14px;
-    background:url(close.png) -36px 0 no-repeat;
+    width:2rem;
+    height:2rem;
     cursor:pointer;
 }
-.ui-dialog-close:hover {
-    background-position:-18px 0;
+.ui-dialog-close i {
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: #ccc;
 }
 .ui-dialog-content {
-    padding: 10px;
-    min-height: 28px;
+    padding: 0 20px 2rem;
+    min-height: 1.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #666;
 }
 .ui-dialog-footer {
-    padding:10px 0;
     text-align: center;
+    border-top: 1px solid #eee;
 }
 .ui-dialog-input {
     width: 94%;
-    height:20px;
+    height:2rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
     padding:3px 5px;
     border: 1px solid #eee;
     border-radius: 5px;
@@ -122,25 +159,49 @@
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 .ui-dialog-footer input{
-    width: auto;
 }
 .ui-dialog-button {
-    border:0;
-    padding: 5px 10px;
-    margin:0 3px;
-    border-radius: 3px;
+    -webkit-appearance: none;
+    border: none;
+    background: none;
+    width: 50% !important;
+    height: 3.7rem;
     cursor: pointer;
-    color: #fff;
+    color: #0277bd;
+    font-size: 1.4rem;
+    line-height: 3.7rem;
+    text-align: center;
 }
 .ui-dialog-ok {
-    background: -webkit-gradient(linear, 0 0, 0 100%, from(#3bb5ed), to(#3893d3));
 }
 .ui-dialog-cancel {
-    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ccc), to(#aaa));
+    border-right: 1px solid #eee;
 }
 .ui-dialog-ok:hover {
-    background: -webkit-gradient(linear, 0 0, 0 100%, from(#3893d3), to(#3bb5ed));
 }
 .ui-dialog-cancel:hover {
-    background: -webkit-gradient(linear, 0 0, 0 100%, from(#aaa), to(#ccc));
+}
+
+/* special dialogs */
+.ui-dialog-special-heading {
+    font-size: 1.9rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+}
+.ui-dialog-special-heading .iconfont {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 10px;
+    font-size: 3rem;
+}
+.ui-dialog-special-heading .iconfont.succeed {
+    color: #8bc34a;
+}
+.ui-dialog-special-heading .iconfont.fail {
+    color: #ff636a;
+}
+.ui-dialog-special-content {
+    text-align: center;
+    margin-top: 1rem;
 }
