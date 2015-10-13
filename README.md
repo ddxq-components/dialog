@@ -18,6 +18,8 @@ dialog.dialog(opt)
 dialog.alert(msg, fn, title)
 dialog.confirm(msg, ok, cancel, title)
 dialog.prompt(title, defaultVal, fn)
+dialog.succeed(msg, detail)
+dialog.fail(msg, detail, solve, solveButton)
 dialog.tips(msg, type, time)
 dialog.closeTips()
 ```
