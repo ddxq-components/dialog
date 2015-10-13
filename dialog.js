@@ -85,7 +85,7 @@ var dialog = {
      */
     dialog: function (opt) {
         var that = this;
-        var SCREEN_W = screen.width;
+        var SCREEN_W = window.innerWidth;
         if (!opt.id) {
             throw Error("id必填");
             return;
