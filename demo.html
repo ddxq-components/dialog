@@ -117,6 +117,8 @@
 <input type="button" value="confirm"
        onclick="$.mDialog.confirm('确认内容',function(){alert('yes');},function(){alert('no');},'确认标题')"/>
 <input type="button" value="prompt" onclick="$.mDialog.prompt('提示标题','默认值',function(val){alert(val);})"/>
+<input type="button" value="succeed" onclick="$.mDialog.succeed('成功了！','这回成功了，真他妈高兴啊！')"/>
+<input type="button" value="fail" onclick="$.mDialog.fail('失败了！','WC!又挂了，你妹啊！',function(){alert('哥不服，重来')},'再来')"/>
 <input type="button" value="dialog" onclick="customDialog();"/>
 </body>
 
