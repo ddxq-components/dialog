@@ -197,6 +197,7 @@ var dialog = {
             ok: fn || true,
             cancel: false
         });
+        this.getDialog("alert").$dialog.find('.ui-dialog-ok').css('width', '100%');
     },
     confirm: function (msg, ok, cancel, title) {
         this.dialog({
@@ -252,7 +253,7 @@ var dialog = {
     },
 
     /**
-     * type = |text|loading|info|error|succeed|
+     * type = |text|loading|info|error|succeed
      */
     tips: function (msg, type, time) {
         var that = this;

@@ -12,3 +12,7 @@ History
 
   succeed(msg, detail)
   fail(msg, detail, solve, solveButton)
+
+## 1.1.1 / 2015-10-13
+
+* ui fixes
