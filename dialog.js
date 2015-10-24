@@ -113,7 +113,7 @@ var dialog = {
             tmplArr.push('<a href="javascript:;" class="ui-dialog-close" title="关闭"><i class="iconfont icon-close-fill"></i></a>');
         }
         if (opt.title) {
-            tmplArr.push('<div class="ui-dialog-header"><div class="ui-dialog-title"><i class="iconfont icon-alert-fill"></i> ' + opt.title + '</div></div>');
+            tmplArr.push('<div class="ui-dialog-header"><div class="ui-dialog-title">' + opt.title + '</div></div>');
         }
         tmplArr.push('<div class="ui-dialog-content">' + opt.content + '</div>');
         if (opt.ok || opt.cancel) {
